@@ -16,7 +16,6 @@ class EmployeeList extends Component {
         }
       }
       sortName(event){
-        console.log(this.state.order);
         if (this.state.order === 'chronological') {
           this.setState({
             order: 'reverseChronological'
@@ -90,31 +89,31 @@ class EmployeeList extends Component {
       }
     );
     return (
-      <div className="text-center" >
-        <br></br>
-        <input type="text"
-          value={this.state.search}
-          onChange={this.updateSearch.bind(this)} /> Search by Employee
-   <div className="col-md-12">
-     
-          <ul>
-            <br></br>
-            <div className="row">
-              <p className="col-md-2 font"><button onClick={this.sortName}>Name</button></p>
-              <p className="col-md-2 font"><button onClick={this.sortNumber}>Phone Number</button></p>
-              <p className="col-md-2 font"><button onClick={this.sortEmail}>Email</button></p>
-              <p className="col-md-2 font"><button onClick={this.sortDepartment}>Department</button></p>
-              <p className="col-md-2 font"><button onClick={this.sortDate}>Start Date</button></p>
-              <p className="col-md-2 font"><button onClick={this.sortLocation}>Location</button></p>
-            </div>
-            {filterEmployee.map((employee) => {
-              return (
-              <Employee employee={employee} key={employee.id} />
-            })}
-          </ul>
+        <div className="text-center" >
+          <br></br>
+          <input type="text"
+            value={this.state.search}
+            onChange={this.updateSearch.bind(this)} /> Search by Employee
+          <div className="col-md-12">
+            <ul>
+              <br></br>
+              <div className="row">
+                <p className="col-md-2 font"><button onClick={this.sortName}>Name</button></p>
+                <p className="col-md-2 font"><button onClick={this.sortNumber}>Phone Number</button></p>
+                <p className="col-md-2 font"><button onClick={this.sortEmail}>Email</button></p>
+                <p className="col-md-2 font"><button onClick={this.sortDepartment}>Department</button></p>
+                <p className="col-md-2 font"><button onClick={this.sortDate}>Start Date</button></p>
+                <p className="col-md-2 font"><button onClick={this.sortLocation}>Location</button></p>
+              </div>
+              {filterEmployee.map((employee) => {
+                return (
+                  <Employee employee={employee} key={employee.id} />
+                )
+              }}
+            </ul>
+          </div>
         </div>
-      </div>
-    );
+      );
     }
 }
  
