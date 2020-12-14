@@ -5,12 +5,11 @@ class Employee extends Component {
         return ( 
             <li>
                 <div>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <p>{this.props.employee.name}</p>
+                    <p>{this.props.employee.location}</p>
+                    <p>{this.props.employee.number}</p>
+                    <p>{this.props.employee.email}</p>
+                    <p>{this.props.employee.department}</p>
                 </div>
             </li>
          );
