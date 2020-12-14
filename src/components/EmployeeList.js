@@ -108,7 +108,8 @@ class EmployeeList extends Component {
               <p className="col-md-2 font"><button onClick={this.sortLocation}>Location</button></p>
             </div>
             {filterEmployee.map((employee) => {
-              return <Employee employee={employee} key={employee.id} />
+              return (
+              <Employee employee={employee} key={employee.id} />
             })}
           </ul>
         </div>
