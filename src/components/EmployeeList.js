@@ -6,7 +6,6 @@ class EmployeeList extends Component {
         super(props);
         this.sortName = this.sortName.bind(this)
         this.sortLocation = this.sortLocation.bind(this)
-        this.sortNumber = this.sortNumber.bind(this)
         this.sortEmail = this.sortEmail.bind(this)
         this.sortDepartment = this.sortDepartment.bind(this)
         this.state = {
@@ -39,20 +38,6 @@ class EmployeeList extends Component {
             local: "chronological"
           });
           this.props.employees.sort((a, b) => (a.location > b.location) ? -1 : 1)
-        }
-      }
-      sortNumber(event){
-        console.log(this.state.order);
-        if (this.state.order === 'chronological') {
-          this.setState({
-            order: 'reverseChronological'
-          });
-          this.props.employees.sort((a, b) => (a.number > b.number) ? 1 : -1)
-        } else {
-          this.setState({
-            order: "chronological"
-          });
-          this.props.employees.sort((a, b) => (a.number > b.number) ? -1 : 1)
         }
       }
       sortEmail(event){
