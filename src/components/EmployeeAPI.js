@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import EmployeeList from './EmployeeList/index';
+import axios from 'axios';
+import EmployeeList from './EmployeeList';
 
-//get the API from https://randomuser.me
-//from the website documentation 
-//$.ajax({
-    // url: 'https://randomuser.me/api/'
-    // dataType: 'json',
-    // success: function(data) {
-    //   console.log(data);
-    // }
-//   });
 class EmployeeAPI extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <EmployeeList />
-         );
-    }
+  state = {
+    employee: []
+  }
+
+  componentDidMount() {
+    axios.get("https://randomuser.me/api/?results=200&nat=us")
+      .then(res => {
+        const employee = res.data.results;
+        console.log(employee);
+        this.setState({ employee: employee });
+      })
+  }
+
+  render() {
+    return (
+        <EmployeeList employee = {this.state.employee} />
+    )
+  }
 }
- 
+
 export default EmployeeAPI;
