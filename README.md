@@ -4,6 +4,8 @@
 This is an application that displays an employee directory using react. The employees can be filters by name.
 # Technologies used
 * React
+* Axios
+* JavaScript
 
 
 # Demo video
