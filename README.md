@@ -7,7 +7,7 @@ This is an application that displays an employee directory using react. The empl
 
 
 # Demo video
-![](vid/demoVid.gif)
+![](vid/ReactApp.gif)
 
 # User Story 
 As a user, I'd like to have a quick access to my employess information by having an entire employee directory and being able to filter them by name. 
