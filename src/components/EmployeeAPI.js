@@ -18,7 +18,7 @@ class EmployeeAPI extends Component {
 
   render() {
     return (
-        <EmployeeList employee = {this.state.employee} />
+      <EmployeeList employee = {this.state.employee} />
     )
   }
 }
