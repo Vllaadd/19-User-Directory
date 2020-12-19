@@ -6,8 +6,10 @@ import EmployeeAPI from "./components/EmployeeAPI.js";
 
 function App() {
   return (
-    <Title />,
-    <EmployeeAPI />
+    <div>
+      <Title />
+      <EmployeeAPI />
+    </div>
   );
 }
 
