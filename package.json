@@ -35,5 +35,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "# Overview This is an application that displays an employee directory using react. The employees can be filters by name. # Technologies used * React * Axios * JavaScript",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vllaadd/19-User-Directory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vllaadd/19-User-Directory/issues"
+  },
+  "homepage": "https://github.com/Vllaadd/19-User-Directory#readme"
 }
