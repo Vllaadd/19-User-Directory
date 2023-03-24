@@ -13,7 +13,7 @@ class EmployeeAPI extends Component {
         const employee = res.data.results;
         console.log(employee);
         this.setState({ employee: employee });
-      })
+      }) 
   }
 
   render() {

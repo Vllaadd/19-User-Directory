@@ -9,32 +9,32 @@ class EmployeeList extends Component {
         this.sortLocation = this.sortLocation.bind(this)
         this.state = {
           search: '',
-          order: "chronological",
-          local: "chronological",
+          order: "ascending",
+          local: "descending",
         }
       }
       sortName(event){
-        if (this.state.order === 'chronological') {
+        if (this.state.order === 'ascending') {
           this.setState({
-            order: 'reverseChronological'
+            order: 'descending'
           });
           this.props.employee.sort((a, b) => (a.name > b.name) ? 1 : -1)
         } else {
           this.setState({
-            order: "chronological"
+            order: "ascending"
           });
           this.props.employee.sort((a, b) => (a.name > b.name) ? -1 : 1)
         }
       }
       sortLocation(event){
-        if (this.state.local === 'chronological') {
+        if (this.state.local === 'ascending') {
           this.setState({
-            local: 'reverseChronological'
+            local: 'descending'
           });
           this.props.employee.sort((a, b) => (a.location > b.location) ? 1 : -1)
         } else {
           this.setState({
-            local: "chronological"
+            local: "ascending"
           });
           this.props.employee.sort((a, b) => (a.location > b.location) ? -1 : 1)
         }
